@@ -6,7 +6,7 @@ const Cart = ({ navigation }) => {
     return (
         <View style={styles.cart}>
           <Text>This is the cart page</Text>
-          <Navigation navigation= {navigation} />
+          {/* <Navigation navigation= {navigation} /> */}
         </View>
     )
 }

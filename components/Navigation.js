@@ -10,28 +10,12 @@ const Tab = createBottomTabNavigator();
 
 const Navigation = ({ navigation }) => {
     return (
-        // <View style={styles.navigation}>
-        //     <FlatList
-        //         numColumns={4}
-        //         style={{width:'100%', paddingTop: 20}}
-        //         data={[
-        //         {key: 'Home'},
-        //         {key: 'Fav'},
-        //         {key: 'Cart'},
-        //         {key: 'Profile'},
-        //         ]}
-        //         renderItem={({item}) => <View style={{width:'25%', alignItems: 'center'}}>
-        //             <Button style={styles.item} title={item.key} 
-        //                 onPress ={() =>  navigation.navigate(item.key)}
-        //             />
-        //         </View>
-        //         }
-        //     />
-        // </View>
         <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Profile" component={Profile} />
-      </Tab.Navigator>
+            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen name="Cart" component={Cart} />
+            <Tab.Screen name="Fav" component={Fav} />
+        </Tab.Navigator>
     )
 }
 
@@ -41,7 +25,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#efefef',
       alignItems: 'center',
       justifyContent: 'center',
-      position: 'fixed',
+    //   position: 'fixed',
       bottom: 0,
       width: '100%',
       height: 50

@@ -6,7 +6,7 @@ const Profile = ({ navigation }) => {
     return (
         <View style={styles.profile}>
           <Text>This is the profile page</Text>
-          <Navigation navigation= {navigation} />
+          {/* <Navigation navigation= {navigation} /> */}
         </View>
     )
 }

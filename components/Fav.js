@@ -6,7 +6,7 @@ const Fav = ({ navigation }) => {
     return (
         <View style={styles.fav}>
           <Text>This is the fav page</Text>
-          <Navigation navigation= {navigation} />
+          {/* <Navigation navigation= {navigation} /> */}
         </View>
     )
 }

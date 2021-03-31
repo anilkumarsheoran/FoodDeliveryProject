@@ -6,7 +6,7 @@ const Home = ({ navigation }) => {
     return (
         <View style={styles.home}>
           <Text>This is the home page</Text>
-          <Navigation navigation= {navigation} />
+          {/* <Navigation navigation= {navigation} /> */}
         </View>
     )
 }
