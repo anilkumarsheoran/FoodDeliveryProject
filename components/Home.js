@@ -1,12 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import Navigation from './Navigation';
+import nearByIcon from '../assets/icons/nearby.png'
 
 const Home = ({ navigation }) => {
     return (
         <View style={styles.home}>
-          <Text>This is the home page</Text>
-          {/* <Navigation navigation= {navigation} /> */}
+          <TouchableOpacity>
+            <Image 
+                source={nearByIcon}
+                style={{
+                    width:30,
+                    height:30,
+                }}
+            />
+          </TouchableOpacity>
+          <View style={styles.location}>
+              <Text>Location</Text>
+          </View>
         </View>
     )
 }
@@ -19,6 +30,11 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       width: '100%'
     },
+    location:{
+        backgroundColor:'grey',
+        paddingVertical: 10
+
+    }
   });
 
 export default Home
