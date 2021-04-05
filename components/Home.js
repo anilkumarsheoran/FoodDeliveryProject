@@ -48,6 +48,69 @@ const Home = ({ navigation }) => {
         },
     ]
 
+    const resturantData = [
+        {
+            id: 1,
+            name:'Burger Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: cakeIcon,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            }
+        },
+        {
+            id: 1,
+            name:'Burger Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: cakeIcon,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            }
+        },
+        {
+            id: 1,
+            name:'Burger Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: cakeIcon,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            }
+        },
+        {
+            id: 1,
+            name:'Burger Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: cakeIcon,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            }
+        },
+        {
+            id: 1,
+            name:'Burger Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: cakeIcon,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            }
+        }
+    ]
+
     function renderHeader(){
         return (
             <View style={styles.home}>
@@ -155,7 +218,9 @@ const Home = ({ navigation }) => {
                         backgroundColor: 'orange'
                     }}
                 >
-                    
+                   <View>
+                       <Text>{item.name}</Text>
+                   </View>
                 </TouchableOpacity>)}
 
         return (
