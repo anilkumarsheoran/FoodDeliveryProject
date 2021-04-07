@@ -9,6 +9,12 @@ import snackIcon from '../assets/icons/french-fries.png'
 import meatIcon from '../assets/icons/meat.png'
 import pizzaIcon from '../assets/icons/pizza-slice.png'
 import cakeIcon from '../assets/icons/cake.png'
+import starIcon from '../assets/icons/star.png'
+import burgerImg from '../assets/icons/burgerimg.jpeg'
+import pizzaImg from '../assets/icons/pizzaimg.jpeg'
+import meatImg from '../assets/icons/meatimg.jpeg'
+import cakeImg from '../assets/icons/cakeimg.jpeg'
+import snackImg from '../assets/icons/snackimg.jpeg'
 
 const Home = ({ navigation }) => {
 
@@ -54,7 +60,33 @@ const Home = ({ navigation }) => {
             name:'Burger Story',
             rating: 4.5,
             priceRating: '$',
-            photo: cakeIcon,
+            photo: burgerImg,
+            duration: '35-45 min',
+            location: {
+                latitude: 28.4595 ,
+                longitude: 77.0266,
+            },
+            courier: {
+                avatar: burgerImg,
+                name: 'James'
+            },
+            menu: [
+                {
+                    menuId: 1,
+                    name: 'Veg Burger',
+                    photo: cakeIcon,
+                    description: 'Veg burger with veg patty & letuce',
+                    calories:250,
+                    price: 20
+                }
+            ]
+        },
+        {
+            id: 2,
+            name:'Pizza Story',
+            rating: 4.5,
+            priceRating: '$',
+            photo: pizzaImg,
             duration: '35-45 min',
             location: {
                 latitude: 28.4595 ,
@@ -62,7 +94,7 @@ const Home = ({ navigation }) => {
             }
         },
         {
-            id: 1,
+            id: 3,
             name:'Burger Story',
             rating: 4.5,
             priceRating: '$',
@@ -74,7 +106,7 @@ const Home = ({ navigation }) => {
             }
         },
         {
-            id: 1,
+            id: 4,
             name:'Burger Story',
             rating: 4.5,
             priceRating: '$',
@@ -86,19 +118,7 @@ const Home = ({ navigation }) => {
             }
         },
         {
-            id: 1,
-            name:'Burger Story',
-            rating: 4.5,
-            priceRating: '$',
-            photo: cakeIcon,
-            duration: '35-45 min',
-            location: {
-                latitude: 28.4595 ,
-                longitude: 77.0266,
-            }
-        },
-        {
-            id: 1,
+            id: 5,
             name:'Burger Story',
             rating: 4.5,
             priceRating: '$',
@@ -209,28 +229,61 @@ const Home = ({ navigation }) => {
             return (
                 <TouchableOpacity
                     style={{
-                        marginTop: 20,
-                        marginRight: 15,
-                        padding:10,
-                        borderRadius: 30,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        backgroundColor: 'orange'
+                        marginBottom: 20,
+                        width:'100%'
                     }}
                 >
-                   <View>
-                       <Text>{item.name}</Text>
+                     <View>
+                        <Image
+                            source={item.photo}
+                            resizeMode="cover"
+                            style={{
+                                    width: '100%',
+                                    height: 200,
+                                    borderRadius: 30
+                                }}
+                        />
+                  
+                      <View style={{position:'absolute',
+                        height:50,
+                        width:100,
+                        bottom:0,
+                        backgroundColor: 'white',
+                        alignItems: 'center',
+                        justifyContent:'center',
+                        borderTopRightRadius:20
+                      }}>
+                        <Text>{item.duration}</Text>
+                      </View>
+                   </View>
+                   <Text>{item.name}</Text>
+                   <View style={{marginBottom:20, flexDirection: 'row'}}>
+                      <Image
+                        source={starIcon}
+                        style={{
+                            width: 20,
+                            height: 20,
+                            marginRight: 10
+                        }}
+                       />
+                       <Text>{item.rating}</Text>
+                       <View 
+                        style={{
+                            flexDirection: 'row',
+                            marginLeft: 10
+                        }}
+                       >
+                            
+                       </View>
                    </View>
                 </TouchableOpacity>)}
 
         return (
             <FlatList 
-            data={categoryData}
-            horizontal
-            showsHorizontalScrollIndicator={false}
+            data={resturantData}
             keyExtractor={item => `${item.id}`}
             renderItem={renderItem}
-            contentContainerStyle={{alignItems: 'center', padding: 10}}
+            contentContainerStyle={{ padding: 10}}
             />
         )
     }
